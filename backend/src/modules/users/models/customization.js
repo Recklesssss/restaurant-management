@@ -35,3 +35,12 @@ exports.updatePhone = async(phone,user_id)=>{
         throw new Error("error from the database",error);
     }
 }
+exports.getProfile = async(user_id)=>{
+    try {
+        const address = await db.query(`select * from users where user_id = $1`,[user_id])
+        console.log("successfully retrieved")
+        return address.rows[0]
+    } catch (error) {
+        throw new Error("error from the database",error);
+    }
+}

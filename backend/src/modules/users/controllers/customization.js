@@ -44,3 +44,15 @@ exports.updatePhone = async(req,res)=>{
         throw new Error("error from controller",error);
     }
 }
+exports.getProfile = async(req,res)=>{
+    try {
+        const {user_id} = req.body 
+        const profile = customize.getProfile(user_id)
+        res.status(200).json({
+            message: "successfully fetched",
+            data : profile
+        })
+    } catch (error) {
+        throw new Error("error from controller",error);
+    }
+}
