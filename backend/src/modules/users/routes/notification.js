@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const notificationController = require("../controllers/notificationController");
+const notificationController = require("../controllers/notification");
 
 router.post("/register-fcm", notificationController.registerFcmToken);
 router.post("/send-notification", notificationController.sendPushNotification);

@@ -13,7 +13,7 @@ app.use('/signup',signUp);
 app.use('/users/customer',customer);
 app.use("/customer", menu)
 app.use("/customer", restaurant)
-app.use("/api/notifications", notificationRoutes);
+app.use("/api/notifications", notificationRoute);
 
 app.listen(port,()=>{
     console.log(` server is running on port ${port}`);
