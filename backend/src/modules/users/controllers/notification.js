@@ -1,4 +1,4 @@
-const notificationService = require("../services/notificationService");
+const notificationService = require("../services/notification");
 
 /**
  * Stores the FCM token for a user
